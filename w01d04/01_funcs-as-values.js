@@ -40,6 +40,3 @@ for (const func of funcs) {
 // const differentVar = funcs[0];
 
 // console.log(differentVar.toString());
-
-
-

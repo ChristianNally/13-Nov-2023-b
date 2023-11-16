@@ -28,7 +28,7 @@ const myObj = {
   goForWalks: function() {
     console.log(`${this.breed} is a great walker`);
   },
-  goForWalk2: () => {
+  goForWalks2: () => {
     console.log(`${this.breed} is a great walker`);
   },
   anotherObj: {
@@ -39,5 +39,4 @@ const myObj = {
 };
 
 myObj.goForWalks();
-myObj.goForWalk2();
-
+myObj.goForWalks2();
