@@ -1,0 +1,23 @@
+{
+  "name": "w02d01",
+  "version": "0.2.0",
+  "description": "Practice with testing using test driven development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "testing",
+    "errors",
+    "assertions",
+    "fun"
+  ],
+  "author": "Andy L",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
