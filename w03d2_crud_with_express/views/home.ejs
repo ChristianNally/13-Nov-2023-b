@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+<h1>List of Places for Sweet Sweet Naps</h1>
+
+<table>
+    <tbody>
+    <tr><th>Name</th><th>Actions</th></tr>
+<% for (let ii = 0; ii < places.length; ii++) { %>
+    <tr>
+        <td><%= places[ii].name %></td>
+        <td>
+            <a href="/read/<%= ii %>">👀</a>
+            <a href="/edit/<%= ii %>">✏️</a>
+            <a href="/delete/<%= ii %>">🗑️</a>
+        </td>
+    </tr>
+<% } %>
+    </tbody>
+</table>
+
+</body>
+</html>

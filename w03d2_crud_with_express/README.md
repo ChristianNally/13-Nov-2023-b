@@ -15,6 +15,12 @@
 [] Update
 [] Delete
 
+[] BROWSE
+[] READ
+[] EDIT
+[] ADD
+[] DELETE
+
 Let's make CRUD routes to help us manage a list of learning objectives.
 
 # CRUD with Express

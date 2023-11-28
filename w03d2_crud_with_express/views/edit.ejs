@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit a Place</title>
+</head>
+<body>
+    
+    <form method="POST" action="/edit/<%= placeToEdit.key %>">
+        <label for="name">name</label>
+        <input id="name" name="name" type="text" value="<%= placeToEdit.name %>"/>
+        <br/>
+        <label for="privacyLevel">privacyLevel</label>
+        <input id="privacyLevel" name="privacyLevel" type="text" value="<%= placeToEdit.privacyLevel %>"/>
+        <br/>
+        <label for="cozyLevel">cozyLevel</label>
+        <input id="cozyLevel" name="cozyLevel" type="text" value="<%= placeToEdit.cozyLevel %>"/>
+        <br/>
+        <label for="volumeRating">volumeRating</label>
+        <input id="volumeRating" name="volumeRating" type="text" value="<%= placeToEdit.volumeRating %>"/>
+        <br/>        
+        <button>Update</button>
+    </form>
+
+</body>
+</html>
