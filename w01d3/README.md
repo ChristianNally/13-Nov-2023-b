@@ -4,7 +4,7 @@
 - [x] Review primitive types
 - [x] Objects!
 - [x] Passing primitives and objects to functions
-- [ ] Functions inside objects (using `this`)
+- [x] Functions inside objects (using `this`)
 - [ ] Object iteration with `for..in`
 
 ### Primitive Types
