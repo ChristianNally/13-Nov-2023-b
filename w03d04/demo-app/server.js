@@ -1,6 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
-const cookieParser = require('cookie-parser');
+// const cookieParser = require('cookie-parser');
+const cookieSession = require('cookie-session');
+const bcrypt = require('bcryptjs');
 
 const app = express();
 const port = 3000;
@@ -39,7 +41,11 @@ app.set('view engine', 'ejs');
 // middleware
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false })); // creates and populates req.body
-app.use(cookieParser()); // creates and populates req.cookies
+// app.use(cookieParser()); // creates and populates req.cookies
+app.use(cookieSession({
+  name: 'whatever',
+  keys: ['jkbndsfjklasdf'],
+}));
 
 // GET /login
 app.get('/login', (req, res) => {
@@ -66,14 +72,18 @@ app.post('/login', (req, res) => {
   }
 
   // do the passwords NOT match
-  if (foundUser.password !== password) {
+  const result = bcrypt.compareSync(password, foundUser.password);
+
+  // if (foundUser.password !== password) {
+  if (!result) {
     return res.status(400).send('passwords do not match');
   }
 
   // happy path! the user is who they say they are!
 
   // set the cookie
-  res.cookie('userId', foundUser.id);
+  // res.cookie('userId', foundUser.id);
+  req.session.userId = foundUser.id;
   
   // redirect the user somewhere
   res.redirect('/protected');
@@ -82,7 +92,8 @@ app.post('/login', (req, res) => {
 // GET /protected
 app.get('/protected', (req, res) => {
   // check for a cookie
-  const userId = req.cookies.userId;
+  // const userId = req.cookies.userId;
+  const userId = req.session.userId;
 
   // do they NOT have a cookie?
   if (!userId) {
@@ -102,7 +113,9 @@ app.get('/protected', (req, res) => {
 // POST /logout
 app.post('/logout', (req, res) => {
   // clear the cookie
-  res.clearCookie('userId');
+  // res.clearCookie('userId');
+  // req.session.userId = null; // { userId: null }
+  req.session = null; // clear all cookies
 
   // send the user somewhere
   res.redirect('/login');
@@ -135,10 +148,14 @@ app.post('/register', (req, res) => {
   // the email is unique!! create a new user object
   const id = Math.random().toString(36).substring(2, 5); // creates a random 3-char string
 
+  // generate the hash
+  const salt = bcrypt.genSaltSync(10);
+  const hash = bcrypt.hashSync(password, salt);
+
   const user = {
     id: id,
     email: email,
-    password: password,
+    password: hash,
   };
 
   // update the users object
