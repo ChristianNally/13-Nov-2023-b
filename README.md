@@ -5,3 +5,4 @@
 * [W01D04 - Callbacks!](/w01d04/)
 * [W02D01 - TDD, CommonJS, and NPM](/w02d01/)
 * [BREAKOUT - Technical Interview Prep](/breakout-ti-prep/)
+* [W03D04 - Security & Real World HTTP Servers](/w03d04/)
