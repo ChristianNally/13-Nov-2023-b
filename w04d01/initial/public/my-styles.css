@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+/* p {}
+aside > p {}
+p.content {}
+p#welcome-message {} */
+
+h2 {
+  padding: 20px 15px 10px 5px;
+  border: 2px solid magenta;
+  border: 5px dotted olivedrab;
+  margin: 10px 0px 5px 15px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+#info {
+  color: hotpink;
+  text-decoration: underline;
+}
