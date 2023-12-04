@@ -6,3 +6,4 @@
 * [W02D01 - TDD, CommonJS, and NPM](/w02d01/)
 * [BREAKOUT - Technical Interview Prep](/breakout-ti-prep/)
 * [W03D04 - Security & Real World HTTP Servers](/w03d04/)
+* [W04D01 - Intro to CSS](/w04d01/)
