@@ -7,12 +7,12 @@ body {
 }
 
 nav {
- /* min-width: 230px; */
+ min-width: 154px;
 }
 
 #main {
   display: flex;
-  min-height: calc(60vh);
+  min-height: 60vh;
 }
 
 #main > article {
@@ -33,10 +33,13 @@ nav {
 
 header,
 footer,
-article,
 nav,
 aside {
   padding: 1em;
+}
+
+article {
+	padding: 1.5em;
 }
 
 header,
@@ -54,9 +57,9 @@ p {
 } */
 
 /* units - percent is relative to its parent container (for all properties, including font-size) */
-/* p {
-  width: 50%;
-} */
+p {
+  width: 75%;
+}
 
 #main .first {
   /* font-size: 1rem; */
@@ -76,7 +79,7 @@ p {
 
 @media only screen and (max-width: 992px) {
   body {
-    /* background-color: blue; */
+    background-color: blue;
   }
 }
 
