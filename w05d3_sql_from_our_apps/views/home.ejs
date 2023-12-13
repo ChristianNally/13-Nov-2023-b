@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objectives Browser</title>
+</head>
+<body>
+	
+	<h1>Objectives Browser</h1>
+	<table>
+	<% for (let objective of objectives) { %>
+		<tr><td><a href="/objectives/<%= objective.id %>/delete">🗑️</a><a href="/objectives/<%= objective.id %>/edit">✏️</a></td><td><%= objective.id %></td><td><a href="/objectives/<%= objective.id %>"><%= objective.question %></a></td></tr>
+	<% } %>
+	</table>
+</body>
+</html>

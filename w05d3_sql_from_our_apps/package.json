@@ -1,0 +1,16 @@
+{
+  "name": "w05d3_sql_from_our_apps",
+  "version": "1.0.0",
+  "description": "### To Do - [ ] Connect a database - [ ] Perform `BREAD` actions on database via command line app - [ ] Demonstrate an SQL Injection attack - [ ] Serve database content to the browser - [ ] Protecting secrets with Environment Variables",
+  "main": "db-tools.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  }
+}

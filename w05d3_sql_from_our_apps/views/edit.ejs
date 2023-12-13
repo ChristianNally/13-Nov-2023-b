@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edit Objective</title>
+</head>
+<body>
+	
+	<form method="POST" action="/objectives/<%= id %>/edit">
+		<label>Question</label>
+		<br/>
+		<textarea name="question"><%= question %></textarea>
+		<br/>
+
+		<input type="hidden" name="id" value="<%= id %>" />
+
+		<label>Type</label>
+		<br/>
+		<input type="text" name="type" value="<%= type %>">
+		<br/>
+
+		<label>Answer</label>
+		<br/>
+		<textarea name="answer"><%= answer %></textarea>
+		<br/>
+
+		<button>Edit</button>
+	</form>
+
+</body>
+</html>
