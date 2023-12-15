@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS blogposts;
 
-CREATE TABLE posts (
+CREATE TABLE blogposts (
   id SERIAL PRIMARY KEY,
   user_id INT,
   FOREIGN KEY(user_id) REFERENCES users(id),
@@ -8,7 +8,7 @@ CREATE TABLE posts (
   content TEXT
 );
 
-INSERT INTO posts
+INSERT INTO blogposts
   (id, user_id, title, content)
 VALUES
   (1, 3, 'et magnis dis parturient montes nascetur', 'consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum'),
