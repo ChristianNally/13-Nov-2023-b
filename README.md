@@ -8,4 +8,5 @@
 * [W03D04 - Security & Real World HTTP Servers](/w03d04/)
 * [W04D01 - Intro to CSS](/w04d01/)
 * [W05D01 - SQL Intro](/w05d01/)
+* [W05D05 - Mid-term Project Kickoff](/w05d05/)
 * [BREAKOUT - Express Router](/breakout-express-router/)
