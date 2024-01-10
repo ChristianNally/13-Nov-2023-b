@@ -18,7 +18,7 @@ const Company = (props) => {
 					key={props.index} 
 					onClick={ (event) => { handleClick(props.index, props.company) } }
 				>
-					{props.company.name} <span>{newStuff}<Company /></span>
+					{props.company.name} <span>{newStuff}</span>
 				</li>
 	);
 };
