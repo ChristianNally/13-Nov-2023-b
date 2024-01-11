@@ -1,0 +1,11 @@
+.TodoListItem {
+  border: 2px solid magenta;
+  padding: 0 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.TodoListItem div {
+  display: flex;
+  justify-content: space-around;
+}
