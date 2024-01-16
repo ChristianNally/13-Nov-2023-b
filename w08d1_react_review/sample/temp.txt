@@ -1,0 +1,36 @@
+
+
+// pure HTML
+<a href="/home">Click Me</a>
+
+
+<form method="POST" action="/path/new">
+	<input />
+</form>
+
+
+// HTTP verbs: GET, POST, (PATCH, DELETE, PUT, ...)
+
+
+//
+// Front-End
+//
+
+// front-end JS  (jQuery)
+$(document).ready(function(){
+
+
+	$('#button').click(function(event){
+
+		event.preventDefault();
+		$.ajax({                          // AHAH 
+			url: '/api/new/thing/json',
+			method: 'DELETE'     // DELETE, PUT, PATCH, ... 
+		})
+		.then()
+		.catch();
+
+	});
+
+});
+
