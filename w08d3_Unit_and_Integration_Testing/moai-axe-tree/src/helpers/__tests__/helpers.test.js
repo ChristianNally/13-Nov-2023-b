@@ -15,8 +15,10 @@ describe('announceResult function', () => {
   test('returns "Won" if player is "Axe" and comp is "Tree"', () => {
 		fakeState.playerSelection = 'Axe';
     fakeState.compSelection = 'Tree';
-    expect(announceResult(fakeState.playerSelection, fakeState.compSelection)).toBe('Won');
-  });
+
+		// console.log('expect(announceResult(fakeState.playerSelection, fakeState.compSelection))', expect(announceResult(fakeState.playerSelection, fakeState.compSelection)));
+		expect(announceResult(fakeState.playerSelection, fakeState.compSelection)).toBe('Won');
+	});
 
   test('returns "Tied" if player is "Axe" and comp is "Axe"', () => {
     fakeState.playerSelection = 'Axe';
