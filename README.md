@@ -11,3 +11,4 @@
 * [W05D05 - Mid-term Project Kickoff](/w05d05/)
 * [BREAKOUT - Express Router](/breakout-express-router/)
 * [W07D04 - React Developer Workflow](/w07d04/)
+* [W08D04 - End-to-End Testing with Cypress](/w08d04/)
