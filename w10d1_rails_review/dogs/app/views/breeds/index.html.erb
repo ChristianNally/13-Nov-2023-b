@@ -1,0 +1,12 @@
+<h1>All the Breeds</h1>
+
+<a href="/dogs">Dogs</a><br/>
+<%= link_to 'Dogs', '/dogs' %><br/>
+
+
+<% @breeds.each do |breed| %>
+<div>
+<h4>Breed: <%= breed.breed %></h4>
+<%= link_to 'Dogs', breed_dogs_path(breed.id) %><br/>
+</div>
+<% end %>

@@ -1,0 +1,14 @@
+<h3>Dogs</h3>
+
+All the dogs with breed id = <%= @breed.id %> (<%= @breed.breed %>)
+
+<% @dogs.each do |dog| %>
+<div class="dog">
+<h2>ID: <%= dog.id %></h2>
+<h2>NAME: <%= dog.name %></h2>
+<h2>SOUND: <%= dog.sound %></h2>
+<h2>AGE: <%= dog.age %></h2>
+<h2>SIZE: <%= dog.size %></h2>
+<h2>BREED: <%= dog.breed.breed %></h2>
+</div>
+<% end %>
